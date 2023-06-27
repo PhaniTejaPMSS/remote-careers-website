@@ -4,9 +4,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerXL</title>
+  <title>{{company_name}}</title>
+
+  <!-- Bootstrap Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
 </head>
 <body>
-  Hello there! You can apply to various available job openings through our website and get your dream job.
+  
+  <div class="container">
+  
+    <h1 class="text-center mt-2 mb-4">
+      {{company_name}} Careers
+    </h1>
+    
+    <img class="img-fluid" id="banner-img" src="https://remote-careers-website--a05p2phani.repl.co/static/hero-sec-background.jpg" width="100%"/>
+    
+    <h2 class="text-center mt-2 mt-4">
+      About {{company_name}}
+    </h2>
+    
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam phasellus. Amet commodo nulla facilisi nullam vehicula. Nibh tellus molestie nunc non blandit massa enim. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Blandit cursus risus at ultrices mi. Maecenas ultricies mi eget mauris pharetra. Et pharetra pharetra massa massa ultricies. Sed viverra ipsum nunc aliquet bibendum. In metus vulputate eu scelerisque felis imperdiet proin.
+    </p>
+    
+    <h2 class="text-center">Job Openings</h2>
+    <!-- <p>A list of job openings like a to-do list</p> -->
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+    
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+      <p class="mt-4">Copyright 2023, {{company_name}}</p>
+    </div>
+    
+  </div>
+  
 </body>
 </html>

@@ -1,0 +1,21 @@
+<div class="row mt-2" style="margin-bottom:16px;">
+  <div class="col-10">
+    <h4 style="color:gray;">
+      {{job['title']}}
+    </h4>
+    <div>
+      <b>Location : </b>{{job['location']}}
+    </div>
+    {% if 'salary' in job %}
+      <div>
+        <b>Salary   : </b>{{job['salary']}}
+      </div>
+    {% endif %}
+  </div>
+  
+  <div class="col-2" style="margin:auto; justify-content:center">
+    <button class="btn btn-outline-primary">Apply</button>
+  </div>
+  
+  <hr class="mt-4" style="width:1250px"/>
+</div>
