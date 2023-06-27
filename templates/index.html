@@ -11,24 +11,26 @@
   
 </head>
 <body>
-  
+
+  {% include 'navbar.html' %}
+
+    <img class="img-fluid" id="banner-img" src="https://remote-careers-website--a05p2phani.repl.co/static/hero-sec-background.jpg" width="100%" 
+      style="height:400px; object-fit: cover;"
+      />
+    
   <div class="container">
   
-    <h1 class="text-center mt-2 mb-4">
+    <h1 class="text-center mt-4 mb-4">
       {{company_name}} Careers
     </h1>
-    
-    <img class="img-fluid" id="banner-img" src="https://remote-careers-website--a05p2phani.repl.co/static/hero-sec-background.jpg" width="100%"/>
-    
+    <!-- 
     <h2 class="text-center mt-2 mt-4">
       About {{company_name}}
     </h2>
+ -->
+    {% include 'about.html' %}
     
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam phasellus. Amet commodo nulla facilisi nullam vehicula. Nibh tellus molestie nunc non blandit massa enim. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Blandit cursus risus at ultrices mi. Maecenas ultricies mi eget mauris pharetra. Et pharetra pharetra massa massa ultricies. Sed viverra ipsum nunc aliquet bibendum. In metus vulputate eu scelerisque felis imperdiet proin.
-    </p>
-    
-    <h2 class="text-center">Job Openings</h2>
+    <h2 class="text-center mt-4">Job Openings</h2>
     <!-- <p>A list of job openings like a to-do list</p> -->
       <div>
         {% for job in jobs %}
@@ -37,9 +39,13 @@
       </div>
     
     <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023, {{company_name}}</p>
+      <a href="mailto:hello@prosurge.ai?subject=Queries%20regarding%20Job%20openings&body=My%20name%20%3A%20%3Cyour%20name%3E%0D%0A%0D%0AMy%20Questions%20%3A%0D%0A1.%20%3Cyour%20question%201%3E%0D%0A2.%20%3Cyour%20question%202%3E"
+        class="btn btn-primary btn-lg">
+        Contact Us
+      </a>
     </div>
+
+    {% include 'footer.html' %}
     
   </div>
   
