@@ -1,2 +1,2 @@
 # remote-careers-website
-A job searching website 
+A job application website 
